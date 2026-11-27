@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const dir=path.dirname(fileURLToPath(import.meta.url));
+const text=name=>fs.readFileSync(path.join(dir,name),'utf8');
+const core=text('queue-core.js').replace(/^export default .*;\s*$/mg,'').replace(/^export /mg,'');
+const preview=text('preview-core.js').replace(/^export /mg,'');
+const css=text('editor.css');
+const source=`window.__ModuleLoader__.load({id:'dsh-html-annotation-editor',factory:(require)=>{const exports={};\n${core}\n${preview}\n${text('layout-source.js')}\nconst css=${JSON.stringify(css)};\nconst tag=document.createElement('style');tag.dataset.pluginCss='dsh-html-annotation-editor';tag.textContent=css;document.head.appendChild(tag);\n${text('client-source.js')}\nreturn exports;}});\n`;
+fs.writeFileSync(path.join(dir,'client.js'),source);
+console.log('Built client.js ('+source.length+' characters)');

@@ -1,0 +1,17 @@
+{
+  "name": "dsh-html-annotation-editor",
+  "version": "0.2.0",
+  "license": "MIT",
+  "author": "caisiyang123",
+  "repository": {"type": "git", "url": "git+https://github.com/caisiyang123/dsh-html-annotation-editor.git"},
+  "homepage": "https://github.com/caisiyang123/dsh-html-annotation-editor#readme",
+  "bugs": {"url": "https://github.com/caisiyang123/dsh-html-annotation-editor/issues"},
+  "engines": {"dsh": ">=0.2.1-rc.2 <0.3.0"},
+  "description": "HTML preview annotations and persistent serial Agent editing tasks",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {".": "./index.mjs", "./client": "./client.js", "./package.json": "./package.json"},
+  "dsh": {"bundle": {"patch": "./cordis.patch.yml"}, "client": {"platform": "web", "inject": ["@deepseek-ai/dsh-client-ui-sidebar-documentpreview", "@deepseek-ai/dsh-client-ui-conversation", "@deepseek-ai/dsh-api-session-controller"], "external": ["react"]}},
+  "scripts": {"build": "node build.mjs", "test": "node --test queue-core.test.mjs preview-core.test.mjs"},
+  "files": ["index.mjs", "client.js", "cordis.patch.yml", "README.md", "USER_GUIDE.md", "LICENSE"]
+}
