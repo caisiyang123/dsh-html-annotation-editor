@@ -4,7 +4,7 @@
 
 Preview local HTML in the right sidebar, annotate page elements, and send editing requests to the current Agent session with a persistent serial queue.
 
-**当前版本：0.2.0 · MIT License · 首个公开提交版。**
+**当前版本：0.2.1 · MIT License。**
 
 [完整中文使用说明书](USER_GUIDE.md) · [版本记录](CHANGELOG.md) · [反馈问题](https://github.com/caisiyang123/dsh-html-annotation-editor/issues)
 
@@ -28,7 +28,7 @@ Preview local HTML in the right sidebar, annotate page elements, and send editin
 普通 dsh web：
 
 ```sh
-dsh plugin --profile web add https://github.com/caisiyang123/dsh-html-annotation-editor/releases/download/v0.2.0/dsh-html-annotation-editor-0.2.0.tgz
+dsh plugin --profile web add https://github.com/caisiyang123/dsh-html-annotation-editor/releases/download/v0.2.1/dsh-html-annotation-editor-0.2.1.tgz
 ```
 
 桌面端请从应用自己的插件管理入口安装。部分官方桌面版本仅接受 npm 来源，可能不支持 GitHub tarball；请不要为安装而修改应用安装包。当前发布只提供 GitHub 源码与 Release 包，尚未发布 npm。

@@ -1,6 +1,6 @@
 # HTML 批注编辑器 使用说明书
 
-版本：0.2.0 · 更新日期：2026-11-27  
+版本：0.2.1 · 更新日期：2026-11-28  
 适用对象：在 BISHENG / DeepSeek Harness 中预览、批注并修改本地 HTML 的用户。
 
 ## 1. 插件能做什么
@@ -18,7 +18,7 @@ HTML 批注编辑器把右侧文档预览与当前 Agent 对话连接起来。�
 普通 dsh web 可使用发布包地址：
 
 ```sh
-dsh plugin --profile web add https://github.com/caisiyang123/dsh-html-annotation-editor/releases/download/v0.2.0/dsh-html-annotation-editor-0.2.0.tgz
+dsh plugin --profile web add https://github.com/caisiyang123/dsh-html-annotation-editor/releases/download/v0.2.1/dsh-html-annotation-editor-0.2.1.tgz
 ```
 
 安装完成后刷新页面。若宿主提示需重新加载插件或重启，按宿主提示操作。插件不要求填写新的模型 API Key，使用当前对话已配置的 Agent 与模型。
