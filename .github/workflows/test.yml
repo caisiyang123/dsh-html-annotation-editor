@@ -12,5 +12,5 @@ jobs:
           node-version: '24'
       - run: node build.mjs
       - run: node --check client.js
-      - run: node --test queue-core.test.mjs preview-core.test.mjs
+      - run: node --test queue-core.test.mjs preview-core.test.mjs client-source.test.mjs
       - run: git diff --exit-code -- client.js

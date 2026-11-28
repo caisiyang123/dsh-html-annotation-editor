@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 · 2026-11-28
+
+- Fix plugin load failure: a queue entry for a deleted session no longer aborts activation. Retain errors are contained per session, retried while the session catalog is still loading, and stale entries are marked failed once the catalog is ready.
+- Page scripts are trusted by default again (still toggleable) and HTML opens in browse mode with the bottom panel collapsed.
+- Bottom panel collapses as one unit; completed tasks are no longer listed.
+
 ## 0.2.0 · 2026-11-27
 
 First public submission release.
